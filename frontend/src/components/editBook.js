@@ -21,7 +21,7 @@ export default function EditBook() {
 
   const getBookData = async () => {
     try {
-      const Res = await axios.get(`http://localhost:5001/api/bookdata/` + id);
+      const Res = await axios.get(`https://add-books-backend.onrender.com/api/bookdata/` + id);
       setstate({...state, BookName:Res.data.BookName, AuthorName:Res.data.AuthorName, Price:Res.data.Price, About:Res.data.About});
       console.log(state);
     } catch (error) {

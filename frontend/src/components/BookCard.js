@@ -24,7 +24,7 @@ export default function BookCard() {
 
   const getAllBooks = async () => {
     try {
-      const Res = await axios.get("http://localhost:5001/api/allbooks");
+      const Res = await axios.get("https://add-books-backend.onrender.com/api/allbooks");
       setAllBooks(Res.data);
       console.log(Res.data);
     } catch (error) {
@@ -40,7 +40,7 @@ export default function BookCard() {
       );
       if (!confirmDelete) return; // If user cancels deletion, exit function
 
-      await axios.delete(`http://localhost:5001/api/deletebook/${_id}`);
+      await axios.delete(`https://add-books-backend.onrender.com/api/deletebook/${_id}`);
       const Res = await axios.get("http://localhost:5001/api/allbooks");
       setAllBooks(Res.data);
       // setAllBooks(Res.data);
