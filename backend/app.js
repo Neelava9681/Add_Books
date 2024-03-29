@@ -9,7 +9,7 @@ port = 5001
 
 app.use(
   cors({
-    origin: "https://addbookscard.netlify.app/",
+    origin: "https://addbookscard.netlify.app",
   })
 );
 
